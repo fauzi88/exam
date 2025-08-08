@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Sumatif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="banner">
+        <h1>UJIAN SUMATIF</h1>
+        <p>SMA NEGERI 1 KALITIDU</p>
+    </div>
+
+    <div class="container">
+        <div class="subject-box" onclick="showTokenPopup('Biologi', 'https://docs.google.com/forms/d/e/1FAIpQLSfXPso8L8p2W3uteyTK82LxM9iEQdtZ3It_quoEnfgkknHlgg/viewform?usp=header')">
+            <h2>Kelas X</h2>
+            <p>Biologi</p>
+        </div>
+        <div class="subject-box" onclick="showTokenPopup('Fisika', 'https://docs.google.com/forms/d/e/1FAIpQLSfXPso8L8p2W3uteyTK82LxM9iEQdtZ3It_quoEnfgkknHlgg/viewform?usp=header')">
+            <h2>Kelas X</h2>
+            <p>Fisika</p>
+        </div>
+        <div class="subject-box" onclick="showTokenPopup('Kimia', 'https://docs.google.com/forms/d/e/1FAIpQLSfXPso8L8p2W3uteyTK82LxM9iEQdtZ3It_quoEnfgkknHlgg/viewform?usp=header')">
+            <h2>Kelas X</h2>
+            <p>Kimia</p>
+        </div>
+        <div class="subject-box" onclick="showTokenPopup('Matematika', 'https://docs.google.com/forms/d/e/1FAIpQLSfXPso8L8p2W3uteyTK82LxM9iEQdtZ3It_quoEnfgkknHlgg/viewform?usp=header')">
+            <h2>Kelas X</h2>
+            <p>Matematika</p>
+        </div>
+    </div>
+
+    <!-- Popup Token -->
+    <div id="tokenPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="popupTitle">Masukkan Token</h2>
+            <input type="password" id="tokenInput" placeholder="Masukkan token...">
+            <button onclick="checkToken()">Submit</button>
+            <p id="errorMsg" style="color: red; display: none;">Token salah!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
