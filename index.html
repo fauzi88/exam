@@ -1,97 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMANSAKA Cbt</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        
-        .ai-tool {
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .ai-tool h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        
-        .ai-tool p {
-            margin-bottom: 0;
-            color: #7f8c8d;
-        }
-        
-        .divider {
-            border: none;
-            height: 1px;
-            background-color: #bdc3c7;
-            margin: 20px 0;
-        }
-        
-        .new-badge {
-            background-color: #e74c3c;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-left: 10px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leonardo.Ai — Featured</title>
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --card:#111217;
+      --muted:#9aa0a9;
+      --accent:#8b5cf6;
+      --accent-2:#ff5ca8;
+      --radius:14px;
+      --soft-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #080809 0%, #0d0d11 60%);
+      color:#fff;
+    }
+    .container{max-width:800px;margin:0 auto;padding:18px;}
+    .header{display:flex;gap:12px;align-items:center;padding:6px 2px;}
+    .logo{
+      width:46px;height:46px;border-radius:10px;
+      background:linear-gradient(135deg,#5eead4,#60a5fa 60%);
+      flex-shrink:0;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .logo img{width:36px;height:36px;border-radius:8px;object-fit:cover}
+    .brand{display:flex;flex-direction:column;line-height:1;}
+    .brand .title{font-weight:700;font-size:18px}
+    .brand .title .dot{color:var(--accent)}
+    .brand .subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+    h2.section-title{
+      margin:18px 0 12px 0;
+      display:flex;align-items:center;gap:10px;font-size:20px;
+    }
+    .sparkle{width:16px;height:16px;border-radius:4px;background:linear-gradient(135deg,var(--accent),#34d399);}
+    .card{
+      background: rgba(255,255,255,0.02);
+      border-radius:var(--radius);
+      padding:14px;
+      margin-bottom:12px;
+      box-shadow: var(--soft-shadow);
+      display:flex;gap:14px;align-items:center;
+      cursor:pointer;
+      transition:transform 0.15s ease;
+    }
+    .card:hover{transform:scale(1.02);}
+    .card .avatar{
+      width:58px;height:58px;border-radius:12px;flex-shrink:0;
+      background:#0b1220;
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .card .avatar img{width:100%;height:100%;object-fit:cover}
+    .card .meta{flex:1;min-width:0}
+    .card .meta .name{font-weight:700;font-size:16px;margin-bottom:6px}
+    .card .meta .desc{font-size:13px;color:var(--muted);line-height:1.4}
+    .badge{
+      padding:6px 8px;border-radius:999px;font-size:12px;font-weight:700;
+      background:linear-gradient(90deg,var(--accent-2),#a78bfa);
+      color:white; margin-left:8px;
+    }
+    .community{
+      display:flex;align-items:center;justify-content:space-between;margin-top:18px;color:var(--muted);
+      padding:8px 2px;
+    }
+  </style>
 </head>
 <body>
-    <h1>SMANSAKA Cbt</h1>
-    
-    <h2>Featured AI Tools</h2>
-    
-    <div class="ai-tool">
-        <h3>GPT-Image-1</h3>
-        <p>OpenAI's image generation model. Great for adding images and describing how it should come together.</p>
-    </div>
-    
-    <hr class="divider">
-    
-    <div class="ai-tool">
-        <h3>FLUX.1 Kontext</h3>
-        <p>Black Forest Labs' Omni model, that can make adjustments to images or text using natural language.</p>
-    </div>
-    
-    <hr class="divider">
-    
-    <div class="ai-tool">
-        <h3>Google Veo 3 Fast</h3>
-        <p>Generate high-quality videos with audio using Google's Veo 3 Fast video model</p>
-    </div>
-    
-    <h2>New <span class="new-badge">New</span></h2>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+      </div>
+      <div class="brand">
+        <div class="title">Smansaka.<span class="dot">CBT</span></div>
+        <div class="subtitle">Featured AI Tools</div>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="section-title"><span class="sparkle"></span> Daftar Soal</h2>
+
+      <!-- Card 1 -->
+      <article class="card" onclick="cekToken(1)">
+        <div class="avatar">
+          <img src="logo.png" alt="GPT-Image-1" />
+        </div>
+        <div class="meta">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="name">Matematika</div>
+            <div class="badge">Kelas X</div>
+          </div>
+          <div class="desc">OpenAI’s image generation model. Great for adding images and describing how it should come together.</div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" onclick="cekToken(2)">
+        <div class="avatar">
+          <img src="logo.png" alt="Flux.Kontext" />
+        </div>
+        <div class="meta">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="name">Biologi</div>
+            <div class="badge">Kelas XI</div>
+          </div>
+          <div class="desc">Black Forest Labs’ Omni model, that can make adjustments to images or text using natural language.</div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" onclick="cekToken(3)">
+        <div class="avatar">
+          <img src="logo.png" alt="Google Veo 3 Fast" />
+        </div>
+        <div class="meta">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="name">Bahasa Indonesia</div>
+            <div class="badge">Kelas XI</div>
+          </div>
+          <div class="desc">Generate high-quality videos with audio using Google’s Veo 3 Fast video model.</div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" onclick="cekToken(4)">
+        <div class="avatar">
+          <img src="logo.png" alt="New AI Tool" />
+        </div>
+        <div class="meta">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="name">Matematika</div>
+            <div class="badge">Kelas XII</div>
+          </div>
+          <div class="desc">Deskripsi singkat untuk AI tool tambahan yang baru ditambahkan di daftar.</div>
+        </div>
+      </article>
+
+      <div class="community">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:30px;height:30px;border-radius:6px;background:linear-gradient(90deg,#7048e8,#ff7ab6);display:flex;align-items:center;justify-content:center">🎨</div>
+          <div style="font-weight:700">Community Creations</div>
+        </div>
+        <div style="color:var(--muted);font-weight:600">Trending ▾</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const cardsData = {
+      1: { token: "123", link: "https://openai.com" },
+      2: { token: "456", link: "https://flux.ai" },
+      3: { token: "789", link: "https://google.com" },
+      4: { token: "999", link: "https://example.com" }
+    };
+
+    function cekToken(id) {
+      let inputToken = prompt("Masukkan token:");
+      if (inputToken === cardsData[id].token) {
+        window.open(cardsData[id].link, "_blank");
+      } else if (inputToken !== null) {
+        alert("Token salah!");
+      }
+    }
+  </script>
 </body>
-        </html>
-
-
-
-
+</html>
